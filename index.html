@@ -215,9 +215,9 @@
             { title: "Address of Destination", info: "1170 E 2700 S, Salt Lake City, UT 84106." },
             { title: "Distance of Destination", info: "28.8" },
             { title: "Estimated Time to Destination", info: "40" },
-            { title: "State of Charge of Battery", info: "26% Charge." },
-            { title: "Range of Current Battery", info: "78 Minutes." },
-            { title: "Estimated Drive-distance with Current Charge", info: "58.5 Miles." },
+            { title: "State of Charge of Battery", info: "26% charge." },
+            { title: "Range of Current Battery", info: "78 minutes." },
+            { title: "Estimated Drive Distance with Current Charge", info: "58.5 miles." },
             { title: "Type of Chargin Socket", info: "J1772." },
             { title: "kW Needed to Fully Charge Your Car", info: "44.4 kW." }
         ];
@@ -247,19 +247,19 @@
                         { type: 'CCS1', value: '8' }
                     ],
                 socketAvalability: [
-                        { type: 'CCS1', value: '2 available' }
+                        { type: 'CCS1', value: '2' }
                     ],
 
                 energySource: '72% Grid, 28% Renewable',
 
                 chargingFee: '$0.27',
                 chargingFeeRate: 'per kWh',
-                parkingFee: 'free',
+                parkingFee: '$0.00',
                 parkingFeeRate: 'for any amount of time',
 
-                coffee: 'Yes <br><br> There is a coffee shop in walking distance 0.2 miles away.',
-                grocery: 'Yes <br><br> There is a grocery store in walking distance 0.3 miles away.',
-                sportsClothes: 'Yes <br><br> There is a sports or clothing store in walking distance 0.3 miles away.',
+                coffee: 'Yes. <br><br> There is a coffee shop in walking distance 0.2 miles away.',
+                grocery: 'Yes. <br><br> There is a grocery store in walking distance 0.3 miles away.',
+                sportsClothes: 'Yes. <br><br> There is a sports or clothing store in walking distance 0.3 miles away.',
                 
                 rating: '★ ★ ★ ★ ★',
                 ratingNum: '23'
@@ -286,20 +286,20 @@
                         { type: 'J1772', value: '444' }
                     ],
                 socketAvalability: [
-                        { type: 'J1772', value: '0 available' }
+                        { type: 'J1772', value: '0' }
                     ],      
 
                 energySource: '60% Grid, 40% Renewable',
 
                 chargingFee: '$0.00',
-                chargingFeeRate: 'per kWh',
+                chargingFeeRate: 'per any amount of power',
 
-                parkingFee: 'free',
+                parkingFee: '$0.00',
                 parkingFeeRate: 'for any amount of time',
 
-                coffee: 'Yes <br><br> There is a coffee shop in walking distance 0.1 miles away.',
-                grocery: 'Yes <br><br> There is a grocery store in walking distance 0.5 miles away.',
-                sportsClothes: 'Yes <br><br> There is a sports or clothing store in walking distance 0.1 miles away.',
+                coffee: 'Yes. <br><br> There is a coffee shop in walking distance 0.1 miles away.',
+                grocery: 'Yes. <br><br> There is a grocery store in walking distance 0.5 miles away.',
+                sportsClothes: 'Yes. <br><br> There is a sports or clothing store in walking distance 0.1 miles away.',
 
                 rating: '★ ★ ★ ★ ✰',
                 ratingNum: '57'
@@ -583,7 +583,7 @@
             content = `<p style="font-size: 16px; padding: 5px;">${infoContent}</p>`;
 
             if (infoType === 'rating') {
-                content = `<p style="font-size: 16px; padding: 5px;"><span class="stars">${station.rating}</span> <br><br> There are ${station.ratingNum} total reviews</p>`;
+                content = `<p style="font-size: 16px; padding: 5px;"><b>Rating:</b><br><span class="stars">${station.rating}</span> <br><br> There are ${station.ratingNum} total reviews.</p>`;
                 console.log('Rating clicked');
             }
 
